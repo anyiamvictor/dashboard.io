@@ -1,0 +1,350 @@
+/* Setting custom colors for the web page */
+:root{
+    --color-primary-main:#350066;
+    --color-primary-btn:#5e02b4;
+    
+
+--color-primary-complementary:#fdfd03;
+--color-primary-accent:#000000;
+--color-primary-font:white;
+--color-primary-font2:rgb(11, 0, 0);
+
+--color-secondary-main:green;
+--color-secondary-complementary:#ffff00;
+--color-secondary-accent:#78ad0c;
+
+--color-tetiary-main:#F5F5DC;
+--color-tetiary-complementary:#581212;
+--color-tetiary-accent:#000000;
+
+}
+
+
+/* Css Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border:1px solid */
+ }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+/* The main container contains the entire sections of the page */
+.maincontainer{
+    display: flex;
+}
+
+
+/* Can also be call side bar. contains the dashboards and links */
+.side-nav{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--color-secondary-main);
+    height:106rem;
+    width:300px;
+    color:var(--color-primary-font);
+    font-family: sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+
+}
+
+/* The dashboard header and logo(SVG) set to flex to make the appear in a row */
+#side-nav_header{
+    display:flex;
+    margin-top:3rem
+}
+
+/* increasing the size logo image */
+#side-nav_header img{
+    width:70px
+}
+
+/* The container for each row item in the side bar */
+.side-nav_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    font-size:20px;
+    margin-left:1rem;
+}
+
+/* Helper css to align the icon and links */
+.side-nav_item>*{
+    display:flex;
+    align-items: center;
+
+}
+
+/* Setting the links and visited default styles */
+.side-nav_link:link, .side-nav_link:visited{
+    text-decoration: none;
+    color:var(--color-primary-font);
+    width:100%;
+    padding:16px;
+    z-index: 5;
+    /* border:1px solid */        
+}
+
+/* creating space between the icons and the links */
+.icon{
+    margin-right: 22px;
+    
+}
+
+/* Postition to give the ::before content a base to hold */
+.side-nav_item_list{
+    position:relative;
+}
+
+/* The ::before element for the hover effect */
+.side-nav_item_list::before{
+    content:"";
+    border-left:1px solid var(--color-secondary-accent);
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    transform: scaleY(0);
+    width:3px;
+    transform-origin:right;
+    transition: transform .5s,
+                  width .2s ease-in-out;
+
+}
+
+.side-nav_item_list:hover::before{
+    transform: scaleY(.9);
+    width:265px;
+    background-color:var(--color-secondary-accent);
+    border-radius:5px;
+
+}
+
+
+
+
+
+
+
+/* the second section which will contain the top navigation and the contents below it */
+.container{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    flex:1
+}
+
+.top-nav{
+    color:var(--color-tetiary-main);
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(2, 114, 67) ;
+    font-size:20px;
+    text-shadow: 2px 2px 4px var(--color-secondary-main),9px 2px 14px rgb(0, 0, 0),2px 2px 14px rgb(11, 0, 1);
+
+}
+
+.top-nav_first_row, .top-nav_second_row{
+    display:flex;
+    align-items: center;
+    padding:19px;
+    margin:0 10rem;
+
+}
+
+#first_row_search{
+    display:flex;
+    align-items:center;
+   margin-right:auto;
+}
+
+
+#input_bar{
+    border:1px solid black;
+    width:60rem;
+    padding:10px;
+    border-radius:15px;
+    transition:all .2s;
+}
+
+#input_bar:focus{
+    width:80rem;
+    background:rgba(0, 128, 0, 0.258);
+    font-size:22px;
+    color:rgb(255, 255, 255);
+}
+
+#top-nav-firstrow_image{
+    width:50px;
+    border-radius:16px;
+    overflow: hidden;
+}
+
+#top-nav-firstrow_image img{
+    width:100%;
+
+}
+
+#top-nav-second_row_image{
+    width:80px;
+    border-radius:16px;
+    overflow: hidden;
+}
+
+#top-nav-second_row_image img{
+    width:100%;
+
+}
+
+.btn_top-nav_second{
+    box-shadow: .6px 9px 25px rgba(1, 28, 17, 0.943) ;
+    background-color:rgba(1, 91, 54, 0.943);
+    padding:10px;
+    width:19rem;
+    text-align: center;
+    border-radius:20px;
+    margin:22px;
+    cursor:pointer;
+    transition: all .1s ease-in-out;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: none
+}
+
+
+.btn_top-nav_second:active{
+    box-shadow: 0px 0px 1px  rgba(1, 55, 33, 0.943) ;
+    transform:translateY(3px);
+    transform:scale(.93);
+}
+
+#top-navfirst_row-icons{
+    margin:0 4rem
+}
+
+#top-nav-firstrow_image{
+    margin:0 4rem
+
+}
+
+.greeting{
+    display:flex;
+    flex-direction: column;
+    margin:0 2rem
+}
+
+.btn_top_nav{
+    margin-left:auto;
+    display:flex;
+
+}
+
+.content{
+    display:flex;
+    background-color:rgba(26, 23, 23, 0.094); 
+    /* justify-content:center; */
+    /* align-items: center;;    */
+    gap:3rem;
+    padding:3rem;
+    height:500;    
+}
+
+
+.content_section_1{
+    display:grid;
+    grid-template-columns: repeat(2,1fr) ;
+    gap:3rem;
+
+}
+
+.content_section_2{
+display: flex;
+flex-direction: column;
+/* margin-top:5rem; */
+}
+
+.content_section_1>*{
+    padding:12px;
+    background-color: #fff;
+    border-left:5px solid rgb(90, 175, 241) ;
+    border-radius:7px;
+    gap:10px;
+    height:228px;
+}
+
+.content_section_2>*{
+    padding:22px;
+    background-color: #fff;
+    margin:12px;
+}
+
+#content_0{
+border:none;
+background:none;
+grid-column: 1/-1;
+padding:0;
+margin-bottom:0px;
+height:10px
+
+}
+
+#content_1,#content_2,#content_3,#content_4,#content_5,#content_6{
+    width: 600px;
+    padding:4rem
+
+}
+
+
+#content_7,#content_8{
+    width:250px;
+    border-radius:9px;
+    flex:1
+}
+
+.content_imgs{
+    margin:4rem;
+    text-align:right;
+}
+
+.content_imgs>*{
+margin:10px
+}
+
+
+#trending_header{
+    background: none;
+    padding: 0;
+}
+
+#announcement{
+    background: none;
+    padding: 0;
+    margin:0 62px 
+
+
+}
+
+.trending_imgs{
+    width:50px;
+}
+
+.trending{
+    display:flex;
+    align-items: center;
+    margin:10px;
+}
+
+.trending_user{
+    margin-left:10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.trending_imgs{
+    border-radius:100px;
+}

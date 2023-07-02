@@ -56,7 +56,7 @@ html {
 /* The dashboard header and logo(SVG) set to flex to make the appear in a row */
 #side-nav_header{
     display:flex;
-    margin-top:3rem
+    margin:6rem;
 }
 
 /* increasing the size logo image */
@@ -70,7 +70,7 @@ html {
     flex-direction: column;
     align-items: center;
     list-style-type: none;
-    font-size:20px;
+    font-size:15px;
     margin-left:1rem;
 }
 
@@ -88,7 +88,6 @@ html {
     width:100%;
     padding:16px;
     z-index: 5;
-    /* border:1px solid */        
 }
 
 /* creating space between the icons and the links */
@@ -200,11 +199,12 @@ html {
 
 }
 
+/* the three buttons */
 .btn_top-nav_second{
     box-shadow: .6px 9px 25px rgba(1, 28, 17, 0.943) ;
     background-color:rgba(1, 91, 54, 0.943);
     padding:10px;
-    width:19rem;
+    width:15rem;
     text-align: center;
     border-radius:20px;
     margin:22px;
@@ -230,6 +230,7 @@ html {
 
 }
 
+
 .greeting{
     display:flex;
     flex-direction: column;
@@ -242,11 +243,13 @@ html {
 
 }
 
+
+/* The third part of the dashboard: the contents are 
+further divided in to two sections, one a grid and the second a flex
+ it containing "Your Projects, Announcements etc" */
 .content{
     display:flex;
     background-color:rgba(26, 23, 23, 0.094); 
-    /* justify-content:center; */
-    /* align-items: center;;    */
     gap:3rem;
     padding:3rem;
     height:500;    
@@ -263,7 +266,6 @@ html {
 .content_section_2{
 display: flex;
 flex-direction: column;
-/* margin-top:5rem; */
 }
 
 .content_section_1>*{
@@ -296,7 +298,6 @@ height:10px
     padding:4rem
 
 }
-
 
 #content_7,#content_8{
     width:90%;

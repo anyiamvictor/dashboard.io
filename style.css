@@ -126,12 +126,6 @@ html {
 
 }
 
-
-
-
-
-
-
 /* the second section which will contain the top navigation and the contents below it */
 .container{
     display:flex;
@@ -140,31 +134,35 @@ html {
     flex:1
 }
 
+/* The top navigation containing the search bar,, new,upload and share buttons, etc */
 .top-nav{
     color:var(--color-tetiary-main);
     display:flex;
     flex-direction: column;
     background-color:rgb(2, 114, 67) ;
-    font-size:20px;
+    font-size:15px;
     text-shadow: 2px 2px 4px var(--color-secondary-main),9px 2px 14px rgb(0, 0, 0),2px 2px 14px rgb(11, 0, 1);
 
 }
 
+/* the top nav is divided into two  rows*/
 .top-nav_first_row, .top-nav_second_row{
     display:flex;
     align-items: center;
     padding:19px;
-    margin:0 10rem;
+    margin:0 9rem;
+    
 
 }
 
+/* the search bar and its icon div */
 #first_row_search{
     display:flex;
     align-items:center;
    margin-right:auto;
 }
 
-
+/* the search bar itself */
 #input_bar{
     border:1px solid black;
     width:60rem;
